@@ -1,0 +1,10 @@
+base_model = MobileNet( input_shape=(224,224,3), include_top= False )
+
+for layer in base_model.layers:
+  layer.trainable = False
+
+
+x = Flatten()(base_model.output)
+x = Dense(units=15 , activation='softmax' )(x)
+
+model = Model(base_model.input, x)

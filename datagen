@@ -1,0 +1,6 @@
+val_datagen = ImageDataGenerator(rescale = 1./255 )
+
+val_data = val_datagen.flow_from_directory(directory= "/content/Animal Classification/dataset",
+                                           target_size=(224,224),
+                                           batch_size=32,
+                                  )

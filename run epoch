@@ -1,0 +1,6 @@
+nhist = model.fit(train_data,
+                           steps_per_epoch= 10,
+                           epochs= 30,
+                           validation_data= val_data,
+                           validation_steps= 8,
+                           callbacks=[es,mc])

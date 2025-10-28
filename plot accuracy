@@ -1,0 +1,8 @@
+from keras.models import load_model
+model = load_model("/content/best_model.keras")
+h =  nhist.history
+h.keys()
+plt.plot(h['accuracy'])
+plt.plot(h['val_accuracy'] , c = "red")
+plt.title("acc vs v-acc")
+plt.show()

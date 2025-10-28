@@ -1,0 +1,17 @@
+t_img , label = next(train_data)
+def plotImages(img_arr, label):
+  """
+  input  :- images array
+  output :- plots the images
+  """
+  count = 0
+  for im, l in zip(img_arr,label) :
+    plt.imshow(im)
+    plt.title(im.shape)
+    plt.axis = False
+    plt.show()
+
+    count += 1
+    if count == 10:
+      break
+plotImages(t_img, label)
